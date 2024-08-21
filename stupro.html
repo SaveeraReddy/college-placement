@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .background-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('background-image.jpg'); /* Background image URL */
+            background-size: cover;
+            z-index: -1; /* Ensure the background image is behind other elements */
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            position: relative;
+        }
+
+        .wrapper {
+            width: 360px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            text-align: center;
+            color: #ffffff; /* White text color */
+            margin-bottom: 20px; /* Adjusted margin */
+        }
+
+        form {
+            width: 100%;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="tel"],
+        input[type="email"],
+        select {
+            width: calc(100% - 22px); /* Adjusted width to account for padding */
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            width: calc(100% - 22px); /* Adjusted width to account for padding */
+            background-color: #4c51af;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="background-image">
+    </div> <!-- Background image div -->
+
+    <div class="container">
+            <img src="https://www.aliet.ac.in/images/header.png" alt="ALIET Logo" width="100%">
+        <div class="wrapper">
+            <h1>Student Registration</h1>
+            <form action="register.php" method="post" enctype="multipart/form-data">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Please Enter Name" required>
+                
+                <label for="rollno">Roll No:</label>
+                <input type="text" id="rollno" name="rollno"  placeholder="Enter ROLLNO" required>
+                
+                <label for="year">Year:</label>
+                <select id="year" name="year" required>
+                    <option value="1">1st Year</option>
+                    <option value="2">2nd Year</option>
+                    <option value="3">3rd Year</option>
+                    <option value="4">4th Year</option>
+                </select>
+                
+                <label for="sem">Semester:</label>
+                <select id="sem" name="sem" required>
+                    <option value="1-1">1-1 SEM</option>
+                    <option value="1-2">1-2 SEM</option>
+                    <option value="2-1">2-1 SEM</option>
+                    <option value="2-2">2-2 SEM</option>
+                    <option value="3-1">3-1 SEM</option>
+                    <option value="3-2">3-2 SEM</option>
+                    <option value="4-1">4-1 SEM</option>
+                    <option value="4-2">4-2 SEM</option>
+                </select>
+                
+                <label for="phonenumber">Phone Number</label>
+                <input type="tel" id="phonenumber" name="phonenumber" placeholder="123-456-7890">
+        
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="example@example.com">
+                
+                <input type="submit" value="Register">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
